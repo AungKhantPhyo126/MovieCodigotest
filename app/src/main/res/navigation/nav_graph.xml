@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moviePagerFragment">
+    <fragment
+        android:id="@+id/moviePagerFragment"
+        android:name="com.akpdev.moviecodigotest.screen.MoviePagerFragment"
+        android:label="MoviePagerFragment" >
+        <action
+            android:id="@+id/action_moviePagerFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.akpdev.moviecodigotest.screen.detail.MovieDetailFragment"
+        android:label="MovieDetailFragment" >
+
+        <argument
+            android:name="movieId"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </fragment>
+</navigation>
